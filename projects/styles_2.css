@@ -1,0 +1,100 @@
+/* Button Styles */
+#button_1 {
+    background-color: #eb703b;
+    color: white;
+    padding: 30px;
+    border-style: dashed;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s;
+}
+
+#button_1:hover {
+    background-color: rgba(224, 13, 13, 0.853);
+}
+
+#button_1:active {
+    background-color: rgba(224, 13, 13, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+#button_2 {
+    background: linear-gradient(to right, orange, red);
+    color: white;
+    padding: 30px;
+    border-style: groove;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s;
+}
+
+#button_2:hover {
+    background: linear-gradient(to right, red, orange);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#button_2:active {
+    background-color: rgba(224, 13, 13, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+/* Body Styles */
+body {
+    background-color: aquamarine;
+}
+
+/* Heading Styles */
+.heading {
+    color: rgb(49, 21, 233);
+    display: flex;
+    justify-content: center;
+}
+
+.heading_2 {
+    color: rgb(233, 21, 98);
+    display: flex;
+    justify-content: center;
+    animation: fadeBounce 2s ease-in-out;
+}
+
+/* Description Styles */
+.description {
+    color: rgb(88, 86, 17);
+    font-size: 20px;
+}
+
+/* Keyframes for Animation Effect */
+@keyframes fadeBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Eid Mubarak Section Styles */
+#eid_mubarak {
+    text-align: center;
+    color: rgb(2, 15, 2);
+    font-style: italic;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.video-container {
+    text-align: center;
+    /* Center align the video */
+}
