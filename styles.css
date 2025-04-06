@@ -130,10 +130,12 @@ label {
 }
 
 input[type="text"],
+input[type="tel"],
 input[type="email"],
 textarea {
     width: 100%;
     padding: 8px;
+    border: solid;
     border-radius: 10px;
     box-sizing: border-box;
     background-color: bisque;
@@ -161,4 +163,14 @@ button:hover {
 #project_buttons {
     padding: 10px20px;
     font-size: 16 px;
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: red;
+}
+
+input:valid,
+textarea:valid {
+    border-color: green;
 }

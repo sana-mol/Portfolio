@@ -23,7 +23,6 @@
     <!-- Contact Information Section -->
     <div class="contact_div">
         <img class="contact_pic" src="images/contact_pic.png" width="50" height="50" alt="Contact Info">
-        <!-- Increased size for better visibility -->
         <h2 class="contact_info"><u>Contact Info</u></h2>
     </div>
 
@@ -31,17 +30,22 @@
     <form id="contact_form">
         <div class="form_group">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required minlength="2" placeholder="Your full name" />
+        </div>
+
+        <div class="form_group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1234567890" />
         </div>
 
         <div class="form_group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="email@123.com" />
         </div>
 
         <div class="form_group">
             <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
+            <input type="text" id="subject" name="subject" required placeholder="subject">
         </div>
 
         <div class="form_group">
