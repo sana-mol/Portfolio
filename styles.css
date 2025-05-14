@@ -11,9 +11,8 @@
 .card {
     display: flex;
     width: 1000px;
-    height: 600px;
+    height: 100vh;
     position: relative;
-    margin-left: 200px;
     background-color: white;
 }
 
@@ -249,4 +248,112 @@ nav ul li a {
 .left-portion img {
     border-radius: 50%;
     align-self: center;
+}
+
+@media (max-width:1180px) {
+    .center-portion {
+        width: 150px;
+        height: 150px;
+        background-color: rgba(56, 2, 70, 0.934);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+    }
+
+    .inner-circle {
+        width: 130px;
+        height: 130px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .inner-center-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content {
+        display: flexbox;
+        max-width: 300px;
+        width: 100%;
+        margin-left: 70px;
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width:615px) {
+    .center-portion {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(56, 2, 70, 0.934);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+    }
+
+    .inner-circle {
+        width: 70px;
+        height: 70px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .inner-center-circle {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(56, 2, 70, 0.934);
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        border: 2px solid #fff;
+    }
+
+    .content {
+        display: flexbox;
+        width: 200%;
+        margin-left: 35px;
+        margin-top: 35px;
+        font-size: smaller;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 5px 10px;
+        text-decoration: none;
+        text-align: center;
+        font-size: smaller;
+        color: rgba(56, 2, 70, 0.934);
+    }
+
+    nav ul li {
+        margin: 0;
+        margin-right: 25px;
+    }
 }
