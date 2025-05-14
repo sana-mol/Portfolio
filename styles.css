@@ -1,4 +1,113 @@
-/* Navigation Styles */
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(white, rgba(227, 136, 250, 0.934), rgb(161, 44, 176));
+}
+
+.card {
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    margin-left: 200px;
+    background-color: white;
+}
+
+.left-portion {
+    width: 30%;
+    background-color: rgba(56, 2, 70, 0.934);
+    display: flex;
+    flex-direction: column;
+}
+
+.center-portion {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(56, 2, 70, 0.934);
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+
+.inner-circle {
+    width: 270px;
+    height: 270px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner-center-circle {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(56, 2, 70, 0.934);
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    border: 4px solid #fff;
+}
+
+.profile {
+    border-radius: 50%;
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.right-portion {
+    width: 70%;
+}
+
+.content {
+    display: flexbox;
+    max-width: 600px;
+    width: 100%;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+.name {
+    display: flex;
+    color: rgba(56, 2, 70, 0.934);
+    text-align: left;
+    margin-left: 60px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about {
+    display: flex;
+    font-weight: 600;
+    font-style: italic;
+    text-align: left;
+    margin-left: 60px;
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: normal;
+}
+
+.navigation {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -9,6 +118,7 @@ nav ul {
 
 nav ul li {
     margin: 0;
+    margin-right: 50px;
 }
 
 nav ul li a {
@@ -16,161 +126,127 @@ nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     text-align: center;
+    color: rgba(56, 2, 70, 0.934);
 }
 
-/* Alternating background and font colors for navigation links */
-nav ul li:nth-child(odd) a {
-    background-color: rgb(219, 176, 150);
-    color: rgb(0, 0, 0);
-}
-
-nav ul li:nth-child(even) a {
-    background-color: rgb(67, 36, 1);
+.projects-heading {
     color: white;
 }
 
-/* Body Styles */
-body {
-    background-color: rgb(187, 133, 93);
+#project-buttons {
+    padding: 50px;
 }
 
-/* About Me Section Styles */
-.about_me {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+.project1 {
+    text-decoration: none;
+    display: block;
+    padding-bottom: 10px;
 }
 
-/* Contact Section Styles */
-.contact_div {
-    display: flex;
+.Btn-project1 {
+    background: linear-gradient(yellow, rgba(234, 197, 33, 0.934), rgb(211, 208, 29));
+    color: blue;
+    font-size: medium;
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+    padding: 20px;
+    font-weight: bold;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
 }
 
-.contact_pic {
-    max-width: 200px;
-    height: auto;
+.Btn-project1:hover {
+    color: white;
+    background: rgb(237, 92, 232);
 }
 
-.contact_info {
-    font-size: 30px;
-    line-height: 1.5;
-    font-style: italic;
-    color: aliceblue;
-}
-
-/* Profile Box Styles */
-.profile {
-    margin-top: 20px;
-    width: 500px;
-    height: auto;
-    border: 5px solid rgb(255, 171, 53);
+.Btn-project2 {
+    background: linear-gradient(rgb(139, 216, 130), rgba(141, 226, 72, 0.934), rgb(114, 241, 24));
+    color: blue;
+    font-size: medium;
+    border: none;
     border-radius: 10px;
-    padding: 5px;
-}
-
-/* About Section Heading Styles */
-.about_main_heading,
-.about_heading {
-    max-width: 600px;
-    font-size: 50px;
-}
-
-.about_main_heading {
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(130, 30, 0);
+    height: 25px;
     font-weight: bold;
-    text-decoration: underline;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
 }
 
-.about_heading {
-    color: rgb(175, 230, 9);
-    text-shadow: 1px 1px 1px black, 3px 3px 5px black;
+.Btn-project2:hover {
+    color: white;
+    background: rgb(237, 92, 232);
 }
 
-/* Description Box Styles with Borders and Padding*/
-#about_description,
-#skills_description {
-    font-size: 20px;
-    max-width: 600px;
-    padding: 5px;
-}
-
-#about_description {
-    color: rgb(16, 15, 15);
-    font-style: italic;
-    font-weight: bold;
-    border: 5px solid rgb(244, 143, 1);
-    border-radius: 10px;
-}
-
-#skills_description {
-    color: rgb(7, 7, 7);
-    font-style: italic;
-    font-weight: bold;
-    border: 5px solid rgb(244, 143, 1);
-    border-radius: 10px;
-}
-
-/* Form Styles*/
-form {
-    max-width: 400px;
-    margin-bottom: 20px;
+#contact-form {
+    padding-top: 20px;
+    padding-left: 10px;
 }
 
 .form_group {
-    margin-bottom: 15px;
+    padding: 10px;
+    justify-content: left;
+    display: flex;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.form_group input {
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    height: 20px;
+    padding-left: 10px;
+    background-color: rgb(211, 153, 210);
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 8px;
+.form_group textarea {
+    border: none;
+    border-radius: 20px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: rgb(211, 153, 210);
+}
+
+.form_group label {
+    color: rgb(10, 61, 111);
+    font-style: italic;
+    font-weight: 800;
+}
+
+.form_group input::placeholder {
+    font-style: italic;
+    font-size: smaller;
+    color: rgb(49, 26, 45);
+}
+
+#contact-form button {
+    font-weight: 900;
+    border-radius: 30px;
+    background-color: rgb(211, 153, 210);
+    color: rgba(56, 2, 70, 0.934);
     border: solid;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: bisque;
+    height: 30px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 90px;
 }
 
-/* Button Styles*/
-button {
-    padding: 10px 15px;
-    background-color: rgb(67, 36, 1);
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Projects Heading Styles*/
-.projects_heading {
+.contacts-heading {
     color: white;
 }
 
-/* Project Buttons Container Styles*/
-#project_buttons {
-    padding: 10px20px;
-    font-size: 16 px;
+.left-portion h1 {
+    text-align: center;
+    width: 100%;
 }
 
-input:invalid,
-textarea:invalid {
-    border-color: red;
-}
-
-input:valid,
-textarea:valid {
-    border-color: green;
+.left-portion img {
+    border-radius: 50%;
+    align-self: center;
 }
