@@ -29,6 +29,14 @@ nav ul li:nth-child(even) a {
     color: white;
 }
 
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: rgb(120, 97, 64);
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
 /* Body Styles */
 body {
     background-color: rgb(187, 133, 93);
@@ -79,7 +87,7 @@ body {
 
 .about_main_heading {
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Sofia", sans-serif;
     color: rgb(130, 30, 0);
     font-weight: bold;
     text-decoration: underline;
