@@ -1,0 +1,142 @@
+/* Hero Section Styles */
+.hero-section {
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: url('/images/bg-image.jpg');
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(56, 2, 70, 0.5);
+    /* Overlay for readability */
+    z-index: 1;
+}
+
+.hero-section h1,
+.hero-section p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 40vh;
+        padding: 40px 0;
+    }
+
+    .navbar-brand img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .about img {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+}
+
+/* --- About Me Section --- */
+.about-me {
+    background-color: #f6b3c7;
+    padding: 60px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-me h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.about-me p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-me img {
+    background: transparent;
+    mix-blend-mode: multiply;
+}
+
+/* --- Project Cards --- */
+#projects .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #eeddb6;
+}
+
+#projects h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+#projects .card-title {
+    color: #007bff;
+    font-weight: 600;
+}
+
+#projects .card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* --- Contact Section --- */
+#contact {
+    background-color: #bfd6ed;
+}
+
+#contact h2 {
+    color: #222;
+    font-weight: 700;
+}
+
+#contact form .form-label {
+    font-weight: 600;
+}
+
+#contact form input,
+#contact form textarea {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+#contact .btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+    background-color: #0056b3;
+}

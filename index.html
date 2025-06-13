@@ -6,50 +6,129 @@
     <meta name="author" content="Sana Mol P.A">
     <meta http-equiv="refresh" content="30">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bootstrap project</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="body">
-    <header class="header"></header>
-    <div class="root">
-        <div class="card">
-            <div class="left-portion"></div>
-            <div class="right-portion">
-                <div class="navigation">
-                    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation" />
-                    <label for="nav-toggle" class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                    <nav>
-                        <ul class="nav-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="content">
-                    <p class="name">Sana Mol P.A</p>
-                    <p class="about">
-                        Ernakulam, Kerala.<br>
-                        Diploma in Electronics and Communication<br>
-                        Pursuing BCA<br>
-                        Software Engineer, Trivandrum.<br>
-                        Web developement enthusiast
-                    </p>
-                </div>
+
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                MyPortfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="center-portion">
-                <div class="inner-circle"></div>
-                <div class="inner-center-circle">
-                    <img class="profile" src="images/sample_profile.jpg" alt="profile-pic">
-                </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="container text-white">
+            <h1 class="display-4 fw-bold">Welcome to My Portfolio</h1>
+            <p class="lead">I design modern websites and applications with clean code and creativity</p>
+        </div>
+    </section>
+
+    <!-- About me section -->
+    <div id="about" class="container mt-5 about-me">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Our Website</h2>
+                <p>
+                    This website highlights my personal and professional journey as a developer. You'll find some of my
+                    favorite projects, tutorials, and tools I've built or contributed to.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <img src="images/user-icon.png" class="img-fluid" alt="Website overview">
             </div>
         </div>
     </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/fb-image.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project One</h5>
+                            <p class="card-text">A sample facebook UI</p>
+                            <a href="./projects/sample_project_1/index.html">Go</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/weather_pic.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Two</h5>
+                            <p class="card-text">A sample Weather App UI</p>
+                            <a href="./projects/sample_project_2/project.html">Go</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/agency_pic.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Three</h5>
+                            <p class="card-text">A sample Agency App UI</p>
+                            <a href="./projects/Agency_webApp/Agency_web/project3.html">Go</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS (for navbar toggling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
