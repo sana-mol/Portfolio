@@ -1,66 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const input = document.querySelector("#calculator input");
-    const buttons = document.querySelectorAll("#calculator button");
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
 
-    let currentInput = "";
-    let resultJustShown = false;
+function addTask() {
+    if (inputBox.value === '') {
+        alert("You must write something");
+    } else {
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        inputBox.value = ""
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+    }
+    saveData();
+}
 
-    buttons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const value = this.textContent;
+listContainer.addEventListener("click", function (e) {
+    if (e.target.tagName == "LI") {
+        e.target.classList.toggle("checked");
+        saveData();
+    } else if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false)
 
-            // if result shown and user clicked for next value
-            if (resultJustShown && (/\d/.test(value) || value === ".")) {
-                currentInput = "";
-                resultJustShown = false;
-            }
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
+}
 
-            if (value === "=") {
-                try {
-                    currentInput = eval(currentInput).toString();
-                } catch (e) {
-                    currentInput = "Error";
-                }
-                resultJustShown = true;
-            } else if (value === "C") {
-                currentInput = "";
-                resultJustShown = false;
-            } else if (value === "x²") {
-                if (currentInput !== "") {
-                    try {
-                        let num = eval(currentInput);
-                        currentInput = (num * num).toString();
-                    } catch (e) {
-                        currentInput = "Error";
-                    }
-                    resultJustShown = true;
-                }
-            } else if (value === "x³") {
-                if (currentInput !== "") {
-                    try {
-                        let num = eval(currentInput);
-                        currentInput = (num * num * num).toString();
-                    } catch (e) {
-                        currentInput = "Error";
-                    }
-                    resultJustShown = true;
-                }
-            } else if (["+", "-", "*", "/"].includes(value)) {
-                // If result was just shown and operator is pressed, continue calculation with result
-                if (resultJustShown) resultJustShown = false;
-                // Prevent multiple operators in a row
-                const operators = ["+", "-", "*", "/"];
-                const lastChar = currentInput.slice(-1);
-                if (operators.includes(lastChar)) {
-                    currentInput = currentInput.slice(0, -1) + value;
-                } else {
-                    currentInput += value;
-                }
-            } else if (/\d/.test(value) || value === ".") {
-                currentInput += value;
-            }
+function showList() {
+    listContainer.innerHTML = localStorage.getItem("data");
+}
 
-            input.value = currentInput || "0";
-        });
-    });
-});
+showList();

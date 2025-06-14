@@ -7,42 +7,22 @@
     <meta name="description"
         content="A simple online grade calculator to compute total, average, and grade your marks.">
     <meta name="author" content="SANA MOL P.A">
-    <title>Calculator</title>
+    <title>Todo-List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <section id="calculator">
-        <div class="container calculator">
-            <input type="text" placeholder="0" disabled="true" />
-
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>5</button>
-
-            <button>9</button>
-            <button>0</button>
-            <button>+</button>
-            <button>-</button>
-
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
-            <button>C</button>
-
-            <button>x²</button>
-            <button>x³</button>
-            <button>.</button>
+    <div class="container">
+        <div class="todo-app">
+            <h2>Todo-list<img src="images/todolist.png" alt="todo-list-img"> </h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container"></ul>
         </div>
-    </section>
+    </div>
     <script src="script.js"></script>
-</body>
 </body>
 
 </html>
