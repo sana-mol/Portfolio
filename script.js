@@ -1,47 +1,66 @@
-function calculateGrade() {
-    let marks = [];
-    for (let index = 1; index <= 5; index++) {
-        let input = prompt(`Enter marks for Subject ${index}(0 - 100):`);
-        let mark = Number(input);
+document.addEventListener("DOMContentLoaded", function () {
+    const input = document.querySelector("#calculator input");
+    const buttons = document.querySelectorAll("#calculator button");
 
-        // Validate input
-        if (isNaN(mark) || mark < 0 || mark > 100) {
-            alert("Invalid input! Please enter a number between 0 and 100.");
-            index--;
-        } else if (input === null) {
-            // if cancel button pressed
-            return;
-        } else {
-            // if ok button pressed
-            marks.push(mark);
-        }
-    }
+    let currentInput = "";
+    let resultJustShown = false;
 
-    // Calculate total and average
-    let total = marks.reduce((sum, curr) => sum + curr, 0);
-    let average = total / marks.length;
+    buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const value = this.textContent;
 
-    // Assign grade using if-else
-    let grade;
-    if (average >= 90) {
-        grade = "A+";
-    } else if (average >= 80) {
-        grade = "A";
-    } else if (average >= 70) {
-        grade = "B";
-    } else if (average >= 60) {
-        grade = "C";
-    } else if (average >= 50) {
-        grade = "D";
-    } else {
-        grade = "F";
-    }
+            // if result shown and user clicked for next value
+            if (resultJustShown && (/\d/.test(value) || value === ".")) {
+                currentInput = "";
+                resultJustShown = false;
+            }
 
-    // Displaying results
-    alert("Result:\n" +
-        "----------\n\n" +
-        `Total Marks: ${total}\n` +
-        `Average Marks: ${average.toFixed(2)}\n` +
-        `Grade: ${grade}`
-    );
-}
+            if (value === "=") {
+                try {
+                    currentInput = eval(currentInput).toString();
+                } catch (e) {
+                    currentInput = "Error";
+                }
+                resultJustShown = true;
+            } else if (value === "C") {
+                currentInput = "";
+                resultJustShown = false;
+            } else if (value === "x²") {
+                if (currentInput !== "") {
+                    try {
+                        let num = eval(currentInput);
+                        currentInput = (num * num).toString();
+                    } catch (e) {
+                        currentInput = "Error";
+                    }
+                    resultJustShown = true;
+                }
+            } else if (value === "x³") {
+                if (currentInput !== "") {
+                    try {
+                        let num = eval(currentInput);
+                        currentInput = (num * num * num).toString();
+                    } catch (e) {
+                        currentInput = "Error";
+                    }
+                    resultJustShown = true;
+                }
+            } else if (["+", "-", "*", "/"].includes(value)) {
+                // If result was just shown and operator is pressed, continue calculation with result
+                if (resultJustShown) resultJustShown = false;
+                // Prevent multiple operators in a row
+                const operators = ["+", "-", "*", "/"];
+                const lastChar = currentInput.slice(-1);
+                if (operators.includes(lastChar)) {
+                    currentInput = currentInput.slice(0, -1) + value;
+                } else {
+                    currentInput += value;
+                }
+            } else if (/\d/.test(value) || value === ".") {
+                currentInput += value;
+            }
+
+            input.value = currentInput || "0";
+        });
+    });
+});
