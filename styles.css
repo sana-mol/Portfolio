@@ -1,184 +1,40 @@
-/* Navigation Styles */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-/* Alternating background and font colors for navigation links */
-nav ul li:nth-child(odd) a {
-    background-color: rgb(219, 176, 150);
-    color: rgb(0, 0, 0);
-}
-
-nav ul li:nth-child(even) a {
-    background-color: rgb(67, 36, 1);
-    color: white;
-}
-
-/* Hover effect for navigation links */
-nav ul li a:hover {
-    background-color: rgb(120, 97, 64);
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-
-/* Body Styles */
 body {
-    background-color: rgb(187, 133, 93);
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
 }
 
-/* About Me Section Styles */
-.about_me {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-/* Contact Section Styles */
-.contact_div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.contact_pic {
-    max-width: 200px;
-    height: auto;
-}
-
-.contact_info {
-    font-size: 30px;
-    line-height: 1.5;
-    font-style: italic;
-    color: aliceblue;
-}
-
-/* Profile Box Styles */
-.profile {
-    margin-top: 20px;
-    width: 500px;
-    height: auto;
-    border: 5px solid rgb(255, 171, 53);
-    border-radius: 10px;
-    padding: 5px;
-}
-
-/* About Section Heading Styles */
-.about_main_heading,
-.about_heading {
-    max-width: 600px;
-    font-size: 50px;
-}
-
-.about_main_heading {
-    text-align: center;
-    font-family: "Sofia", sans-serif;
-    color: rgb(130, 30, 0);
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.about_heading {
-    color: rgb(175, 230, 9);
-    text-shadow: 1px 1px 1px black, 3px 3px 5px black;
-}
-
-/* Description Box Styles with Borders and Padding*/
-#about_description,
-#skills_description {
-    font-size: 20px;
-    max-width: 600px;
-    padding: 5px;
-}
-
-#about_description {
-    color: rgb(16, 15, 15);
-    font-style: italic;
-    font-weight: bold;
-    border: 5px solid rgb(244, 143, 1);
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
     border-radius: 10px;
 }
 
-#skills_description {
-    color: rgb(7, 7, 7);
-    font-style: italic;
-    font-weight: bold;
-    border: 5px solid rgb(244, 143, 1);
-    border-radius: 10px;
+.container h1 {
+    color: red;
 }
 
-/* Form Styles*/
-form {
-    max-width: 400px;
-    margin-bottom: 20px;
-}
-
-.form_group {
-    margin-bottom: 15px;
-}
-
-label {
+form input,
+form button {
     display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea {
     width: 100%;
-    padding: 8px;
-    border: solid;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: bisque;
+    margin: 10px 0;
 }
 
-/* Button Styles*/
-button {
-    padding: 10px 15px;
-    background-color: rgb(67, 36, 1);
+form button {
+    background-color: #d67575;
     color: white;
-    cursor: pointer;
-    border-radius: 10px;
+    font-weight: 700;
 }
 
-button:hover {
-    background-color: #0056b3;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Projects Heading Styles*/
-.projects_heading {
-    color: white;
-}
-
-/* Project Buttons Container Styles*/
-#project_buttons {
-    padding: 10px20px;
-    font-size: 16 px;
-}
-
-input:invalid,
-textarea:invalid {
-    border-color: red;
-}
-
-input:valid,
-textarea:valid {
-    border-color: green;
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }

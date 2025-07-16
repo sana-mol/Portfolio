@@ -2,61 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Sana Mol P.A">
-    <meta http-equiv="refresh" content="30">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio About</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonebook App</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <h1>📞 Phonebook</h1>
 
-    <!-- Main Section -->
-    <section>
-        <h1 class="about_main_heading">Welcome to My Portfolio</h1>
-    </section>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="text" id="phone" placeholder="Phone Number" required />
+            <button type="submit">Add Contact</button>
+        </form>
 
-    <!-- Introduction Section -->
-    <section class="Introduction">
-        <div class="about_me">
-            <img src="images/sample_profile.jpg" alt="Sample Profile" class="profile" />
-            <div class="description">
-                <h1 class="about_heading">About Me</h1>
+        <input type="text" id="search" placeholder="Search by name or number" />
 
-                <p id="about_description">
-                    Hi, I'm Sana Mol P.A.<br>
-                    I'm from Ernakulam, Kerala.<br>
-                    I have completed diploma in Electronics and Communication from Government Polytechnic College,
-                    Perumbavoor.<br>
-                    Currently, I'm pursuing BCA and working as a software engineer in Trivandrum.<br>
-                    There were five members in my family.<br>
-                    In the future, I hope to work as a web developer.
-                </p>
+        <ul id="contacts-list"></ul>
+    </div>
 
-                <h2 class="about_heading">Skills</h2>
-
-                <ul id="skills_description">
-                    <li>Enthusiastic and passionate</li>
-                    <li>Quick Learner</li>
-                    <li>Competitive</li>
-                </ul>
-
-            </div>
-        </div>
-    </section>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
